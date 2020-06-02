@@ -22,7 +22,7 @@ int  get_line_cursor (text txt)
     /* Проверяем, имеется ли текст */
     if (txt == NULL || txt->listok->size() == 0) {
         fprintf(stderr, "There are already no any lines in the text!\n");
-        return number_line;
+        return -1;
     }
     assert(!(txt->listok->empty()));
     number_line++;
