@@ -21,7 +21,7 @@ int empty_line(text txt)
     /* Проверяем, имеется ли текст */
     if (txt == NULL || txt->listok->size() == 0) {
         fprintf(stderr, "There are already no any lines in the text!\n");
-        return -3;
+        return 0;
     }
     assert(!(txt->listok->empty()));
 
