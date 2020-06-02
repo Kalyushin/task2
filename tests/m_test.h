@@ -100,7 +100,7 @@ TEST(mTestPositive, withterminal) {
         newLine++;
     }
 
-    ASSERT_EQ(newLine, 3);
+    ASSERT_EQ(newLine, 2);
     ASSERT_EQ(newPos, 4);
     remove_all(txt);
 }
