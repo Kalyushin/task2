@@ -16,7 +16,7 @@
 void r1e(text txt)
 {
     int empty = empty_line(txt);
-    if ((empty == 0) || (empty = -3)) return;
+    if (empty <= 0) return;
     int code = delete_line(txt,empty_line(txt));
     if (code == -1){
 	if(empty > 1)
