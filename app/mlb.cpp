@@ -12,5 +12,7 @@
 
 void mlb(text txt)
 {
-   move_cursor(txt,get_line_cursor(txt), 0);
+   int code = get_line_cursor(txt);
+   if (code == -1) return;
+   move_cursor(txt,code, 0);
 }
