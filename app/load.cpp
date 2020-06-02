@@ -33,4 +33,5 @@ void load(text txt, char *filename)
     while (fgets(buf, MAXLINE, f)) {
         append_line(txt, static_cast <std::string> (buf));
     }
+    fclose(f);
 }
