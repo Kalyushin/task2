@@ -126,7 +126,7 @@ TEST(mlbTestNegative, emptyText) {
     int testCount;
 
     testCount = read(testFD, testBuffer, 64);
-    snprintf(outBuffer, 64, "There are already no any lines in the text!\nThere are already no any lines in the text!\no");
+    snprintf(outBuffer, 64, "There are already no any lines in the text!\nThere are already no any lines in the text!\no12");
     ASSERT_TRUE(testCount > 0);
     close(testFD);
 
