@@ -139,7 +139,20 @@ TEST(r1eTestPositive, morethan1) {
     snprintf(correctOutput, 1024, "%s/output2.txt", INPUTDIRMR1E);
     snprintf(testOutput, 1024, "%s/outputTest.txt", INPUTDIRMR1E);
 
+    //ставим курсор на пустую строчку
+    m(txt,3,0);
+
     r1e(txt);
+
+    //узнаем позицию курсора
+    int oldLine = 1;
+    list<string>::iterator current = txt->listok->begin();
+    while (current != txt->cursor->line) {
+        current++;
+        oldLine++;
+    }
+    ASSERT_EQ(oldLine, 2);
+    
     r1e(txt);
     save(txt, testOutput);
 
